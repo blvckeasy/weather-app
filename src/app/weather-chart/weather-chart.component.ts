@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../services/weather.service';
 import { Chart } from 'chart.js/auto';
+import dateformat from 'dateformat';
 
 @Component({
     selector: 'app-weather-chart',
@@ -25,9 +26,12 @@ export class WeatherChartComponent implements OnInit {
     }
 
     createChart(dailyData: any) {
-        const labels = dailyData.map((day: any) =>
-            new Date(day.dt * 1000).toLocaleDateString()
-        );
+        const labels = dailyData.map((day: any) => {
+            const date = new Date(day.dt * 1000)
+            const formattedDate = dateformat(date, "dd-mmmm")
+
+            return formattedDate;
+        });
         const temperatures = dailyData.map((day: any) => {
             const temp = day.temp.day
             return temp;
