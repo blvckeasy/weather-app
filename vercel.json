@@ -1,7 +1,11 @@
 {
     "version": 2,
     "builds": [
-      { "src": "angular.json", "use": "@vercel/static-build" }
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "dist/weather-app" }
+      }
     ],
     "routes": [
       { "src": "/(.*)", "dest": "/index.html" }
