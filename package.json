@@ -21,7 +21,10 @@
     "chart.js": "^4.4.4",
     "dateformat": "^5.0.3",
     "dotenv": "^16.4.5",
+    "glob": "^11.0.0",
+    "inflight": "^1.0.6",
     "ng2-charts": "^6.0.1",
+    "rimraf": "^6.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
