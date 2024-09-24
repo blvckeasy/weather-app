@@ -1,4 +1,10 @@
 {
-    "builds": [{ "src": "angular.json", "use": "@vercel/angular" }],
-    "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
-}
+    "version": 2,
+    "builds": [
+      { "src": "angular.json", "use": "@vercel/static-build" }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/index.html" }
+    ]
+  }
+  
